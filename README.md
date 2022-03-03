@@ -1,0 +1,2 @@
+# bangdream_card_spider
+bangdream卡面立绘爬虫
