@@ -7,11 +7,15 @@ bangdream卡面立绘爬虫
 - 优先以中文卡面信息命名图片，若还未汉化则使用日语命名图片
 
 ## 使用方法
-1. 安装依赖
+1. 克隆仓库
+```
+git clone https://github.com/CYDXDianXian/bangdream_card_spider.git
+```
+2. 安装依赖
 ```
 pip install -r requirements.txt -i https://pypi.douban.com/simple/
 ```
-2. 运行程序
+3. 运行程序
 ```
 py bangdream_card_spider.py
 ```
