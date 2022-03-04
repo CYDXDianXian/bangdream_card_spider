@@ -7,7 +7,7 @@ bangdream卡面立绘爬虫
 - 优先以中文卡面信息命名图片，若还未汉化则使用日语命名图片
 
 ## 使用方法
-1. 克隆仓库
+1. 在某个目录下克隆仓库
 ```
 git clone https://github.com/CYDXDianXian/bangdream_card_spider.git
 ```
