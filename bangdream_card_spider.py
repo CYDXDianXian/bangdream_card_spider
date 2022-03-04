@@ -92,24 +92,26 @@ def server_switch(server, key, value):
     bandName = name(value["characterId"])[1]
     Path(path, bandName).mkdir(parents = True, exist_ok = True)
     if value["rarity"] in [1, 2]:
+        stars = f"★{value['rarity']}"
         img_url = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/card_normal.png"
         img_url_trim = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/trim_normal.png"
-        img_name = f"{key}【{characterName}】【{prefix}】card_normal.png"
-        img_name_trim = f"{key}【{characterName}】【{prefix}】trim_normal.png"
+        img_name = f"{key}【{stars}】【{characterName}】【{prefix}】card_normal.png"
+        img_name_trim = f"{key}【{stars}】【{characterName}】【{prefix}】trim_normal.png"
 
         # 图片下载
         download(img_url, bandName, img_name)
         download(img_url_trim, bandName, img_name_trim)
 
     if value["rarity"] in [3, 4]:
+        stars = f"★{value['rarity']}"
         img1_url = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/card_normal.png"
         img1_url_trim = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/trim_normal.png"
         img2_url = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/card_after_training.png"
         img2_url_trim = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/trim_after_training.png"
-        img1_name = f"{key}【{characterName}】【{prefix}】card_normal.png"
-        img1_name_trim = f"{key}【{characterName}】【{prefix}】trim_normal.png"
-        img2_name = f"{key}【{characterName}】【{prefix}】card_after_training.png"
-        img2_name_trim = f"{key}【{characterName}】【{prefix}】trim_after_training.png"
+        img1_name = f"{key}【{stars}】【{characterName}】【{prefix}】card_normal.png"
+        img1_name_trim = f"{key}【{stars}】【{characterName}】【{prefix}】trim_normal.png"
+        img2_name = f"{key}【{stars}】【{characterName}】【{prefix}】card_after_training.png"
+        img2_name_trim = f"{key}【{stars}】【{characterName}】【{prefix}】trim_after_training.png"
 
         # 图片下载
         download(img1_url, bandName, img1_name)
