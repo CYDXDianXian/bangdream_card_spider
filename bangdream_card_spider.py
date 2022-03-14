@@ -26,9 +26,9 @@ try:
 except:
     print('网页请求超时，请检查网络连接')
     sys.exit() # 结束程序
-resp_all.encodin = 'utf-8'
-resp_name.encodin = 'utf-8'
-resp_band.encodin = 'utf-8'
+resp_all.encoding = 'utf-8'
+resp_name.encoding = 'utf-8'
+resp_band.encoding = 'utf-8'
 all_data = resp_all.json()
 name_data = resp_name.json()
 band_data = resp_band.json()
