@@ -23,15 +23,15 @@ try:
     resp_all = requests.get(url_1, headers = headers, proxies = proxy, timeout=90)
     resp_name = requests.get(url_2, headers = headers, proxies = proxy, timeout=90)
     resp_band = requests.get(url_3, headers = headers, proxies = proxy, timeout=90)
+    resp_all.encoding = 'utf-8'
+    resp_name.encoding = 'utf-8'
+    resp_band.encoding = 'utf-8'
+    all_data = resp_all.json()
+    name_data = resp_name.json()
+    band_data = resp_band.json()
 except:
     print(f'{sys.exc_info()[0]} 网页请求超时，请检查网络连接')
     sys.exit() # 结束程序
-resp_all.encoding = 'utf-8'
-resp_name.encoding = 'utf-8'
-resp_band.encoding = 'utf-8'
-all_data = resp_all.json()
-name_data = resp_name.json()
-band_data = resp_band.json()
 
 def name(data):
     '''
@@ -63,12 +63,12 @@ def download(img_url, bandName, img_name):
             img_data = requests.get(img_url, headers = headers, proxies = proxy, timeout = 180).content
             # .content 拿到字节(二进制对象)
             Path(path, bandName, img_name).write_bytes(img_data) # 以二进制方式写入文件
+            success_num += 1
+            print(f'第 {img_num} 个图片下载成功：{img_name}')
         except:
             error_num += 1
             print(f'{sys.exc_info()[0]} 第 {img_num} 个图片下载失败：{img_name}')
             return
-        success_num += 1
-        print(f'第 {img_num} 个图片下载成功：{img_name}')
     else:
         print(f'文件 {img_name} 已存在，不再进行下载')
 
