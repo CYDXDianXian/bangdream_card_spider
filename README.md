@@ -6,9 +6,9 @@ bangdream卡面立绘爬虫-简体中文版
 - 自动按照乐队名称划分文件夹并储存卡面
 - 仅以简体中文卡面名称进行命名和下载
 ## 使用方法
-1. 在某个目录下克隆仓库
+1. 在某个目录下克隆仓库zh-CN分支
 ```
-git clone https://github.com/CYDXDianXian/bangdream_card_spider.git
+git clone https://github.com/CYDXDianXian/bangdream_card_spider.git -b zh-CN
 ```
 2. 安装依赖
 ```
