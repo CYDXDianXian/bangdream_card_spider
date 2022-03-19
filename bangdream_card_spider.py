@@ -80,12 +80,13 @@ def server_switch(server, key, value):
     key: 键
     value: 值
     '''
-    # 优先使用日语卡面名称，为空则使用简体中文，再为空则使用繁体中文
-    prefix = value["prefix"][0]
+    # 仅使用简中卡面名称
+    prefix = value["prefix"][3]
     if prefix == None:
-        prefix = value["prefix"][3]
-        if prefix == None:
-            prefix = value["prefix"][2]
+        return
+        # prefix = value["prefix"][0]
+        # if prefix == None:
+        #     prefix = value["prefix"][2]
 
     res = value["resourceSetName"]
     characterName = name(value["characterId"])[0]
