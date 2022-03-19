@@ -39,8 +39,8 @@ def name(data):
     '''
     for k, v in name_data.items():
         if k == str(data):
-            characterName = v["characterName"][3]
-            bandName = band_data[str(v["bandId"])]["bandName"][3]
+            characterName = v["characterName"][0]
+            bandName = band_data[str(v["bandId"])]["bandName"][0]
 
     return characterName, bandName
 
