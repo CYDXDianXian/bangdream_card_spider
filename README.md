@@ -18,3 +18,7 @@ pip install -r requirements.txt -i https://pypi.douban.com/simple/
 ```
 py bangdream_card_spider.py
 ```
+4. 若想仅保存简体中文卡面，请切换到分支`zh-CN`
+```
+git checkout zh-CN
+```
