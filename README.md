@@ -16,5 +16,5 @@ pip install -r requirements.txt -i https://pypi.douban.com/simple/
 ```
 3. 运行程序
 ```
-py bangdream_card_spider.py
+py bangdream_card_spider_zh-CN.py
 ```
