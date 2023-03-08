@@ -124,7 +124,7 @@ def main():
     主执行函数
     '''
     for k, v in all_data.items():
-        if int(k) <= 3000:
+        if int(k) < 5000:
             server = "jp"
             server_switch(server, k, v)
         if int(k) >= 5000 and int(k) <= 6000:
