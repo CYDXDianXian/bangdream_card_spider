@@ -103,7 +103,7 @@ def server_switch(server, key, value):
         download(img_url, bandName, img_name)
         download(img_url_trim, bandName, img_name_trim)
 
-    if value["rarity"] in [3, 4]:
+    if value["rarity"] >= 3:
         stars = f"★{value['rarity']}"
         img1_url = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/card_normal.png"
         img1_url_trim = f"https://bestdori.com/assets/{server}/characters/resourceset/{res}_rip/trim_normal.png"
